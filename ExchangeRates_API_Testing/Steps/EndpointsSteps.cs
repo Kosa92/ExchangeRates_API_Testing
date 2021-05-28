@@ -24,7 +24,7 @@ namespace SpecFlowProject2.Steps
             actualResponse = restShartConnector.SendRequest(requestUrl);
         }
 
-        [Then(@"the API response with error (.*)")]
+        [Then(@"the API response with request content (.*)")]
         public void ThenTheResponseShouldHaveContent(string expectedRequestContent)
         {
             Assert.AreEqual(actualResponse.Content, expectedRequestContent);
